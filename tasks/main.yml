@@ -1,0 +1,12 @@
+---
+  - name: install php from apt
+    apt: pkg={{ item }} state=latest
+    with_items: 
+      - php5
+      - php5-curl
+
+  - include: apache.yml
+    when: skip_apache != true 
+
+  - include: mysql.yml
+    when: skip_mysql != true
