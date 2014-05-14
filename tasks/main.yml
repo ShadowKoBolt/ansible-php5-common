@@ -5,6 +5,7 @@
       - php5
       - php5-curl
       - php5-mcrypt
+      - php5-gd
 
   - include: apache.yml
     when: skip_apache != true 
